@@ -1,0 +1,331 @@
+.layer-hide-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+}
+
+.report {
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.report-container {
+  position: absolute;
+  background-color: #ffffff;
+  width: 45%;
+  height: auto;
+  border-radius: 10px;
+  z-index: 300;
+}
+
+.show-report {
+  visibility: visible;
+}
+
+.hide-report {
+  visibility: hidden;
+}
+
+.report-container h2 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 20px 0px 10px 0px;
+}
+
+.reports-container-scroll {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.name-container {
+  position: relative;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  padding: 18px 8px;
+  border-bottom: solid 2px #dfdfdf;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.name-container.active {
+  border: none;
+}
+
+.name-container:hover {
+  background-color: #dfdfdf;
+}
+
+.organization-arrow-icon {
+  position: absolute;
+  right: 1%;
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.organization-arrow-icon ion-icon {
+  font-size: 23px;
+}
+
+.name-container h4 {
+  color: rgb(46, 46, 46);
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.report-group-container {
+  position: relative;
+  margin: auto;
+
+  width: 90%;
+  height: 0;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  border-radius: 10px;
+  color: rgb(64, 64, 64);
+}
+
+.report-group-container.active {
+  padding-bottom: 0px;
+  height: auto;
+
+  border-radius: 10px;
+  border-bottom: solid 2px #dfdfdf;
+}
+
+.layer-month-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  border-radius: 10px;
+}
+
+.report-month-container:hover {
+  background-color: #e4e4e4;
+}
+
+.report-month-container {
+  position: relative;
+
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.report-month-container input {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  z-index: 100;
+}
+
+.report-month-container label {
+  margin-left: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  z-index: 100;
+  user-select: none;
+}
+
+.month-arrow-icon {
+  position: absolute;
+  right: 3%;
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.month-arrow-icon ion-icon {
+  font-size: 22px;
+}
+
+.icon-rotate {
+  transform: rotate(-90deg);
+}
+
+.report-days-container {
+  position: relative;
+
+  width: 100%;
+  height: 0;
+
+  padding-left: 20px;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+.report-days-container.active {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: auto;
+}
+
+.report-days-group {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.report-days-group input {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.report-button-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.report-button-cancel,
+.report-button-download {
+  position: absolute;
+
+  width: 19%;
+
+  margin-right: 5%;
+  padding: 8px 0px;
+
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.report-button-cancel {
+  background-color: #2f83c2;
+  right: 20%;
+}
+
+.report-button-cancel:hover {
+  background-color: #12588d;
+}
+
+.report-button-download {
+  background-color: #64a454;
+  right: 0;
+}
+
+.report-button-download:hover {
+  background-color: #549145;
+}
+
+.report-button-download[disabled] {
+  background-color: #a4a4a4;
+  color: rgb(51, 50, 50);
+  right: 0;
+}
+
+/* Animación botón login */
+.report-button-cancel:after,
+.report-button-download:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.report-button-cancel:focus:not(:active)::after,
+.report-button-download:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@media only screen and (max-width: 479px) {
+  .report-container {
+    width: 95%;
+  }
+
+  .report-month-container input {
+    width: 14px;
+    height: 14px;
+  }
+
+  .report-month-container label {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .report-container {
+    width: 90%;
+  }
+
+  .report-month-container input {
+    width: 15px;
+    height: 15px;
+  }
+
+  .report-month-container label {
+    font-size: 14px;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .report-container {
+    width: 65%;
+  }
+}
