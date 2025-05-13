@@ -16,7 +16,6 @@ import Visor2AlcaldiaBog from "./Visor2AlcaldiaBog";
 const Visor1UUID = "a0cf4573-5968-4b91-bdec-b736f214f356"
 const Visor2UUID = "a163d3be-3fbe-4fa2-b820-48ca73eaa4d4"
 
-
 const buttonColor = (color) => createTheme({
     palette: {
         primary: {
